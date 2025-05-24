@@ -50,6 +50,9 @@ function Button({
   return (
     <Comp
       data-slot="button"
+      onMouseOver={(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+        event.currentTarget.style.cursor = "pointer";
+      }}
       className={cn(buttonVariants({ variant, size, className }))}
       {...props}
     />
