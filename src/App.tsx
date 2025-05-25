@@ -1,10 +1,9 @@
 import * as React from "react";
-import { Button } from "./components/ui/button";
 import PageBackground from "./components/PageBackground";
 import PageNavMenu from "./components/PageNavMenu";
 import MainPage from "./pages/MainPage";
 import { Route, Routes } from "react-router";
-import Blog from "./pages/blog/Blog";
+import BlogCards from "./pages/blog/Blog";
 
 function App() {
   return (
@@ -12,7 +11,7 @@ function App() {
       <PageNavMenu />
       <Routes>
         <Route path="/" element={<MainPage />} />
-        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog" element={<BlogCards />} />
       </Routes>
     </PageBackground>
   );
