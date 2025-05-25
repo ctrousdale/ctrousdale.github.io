@@ -2,16 +2,18 @@ import * as React from "react";
 import { Button } from "./components/ui/button";
 import PageBackground from "./components/PageBackground";
 import PageNavMenu from "./components/PageNavMenu";
+import MainPage from "./pages/MainPage";
+import { Route, Routes } from "react-router";
+import Blog from "./pages/blog/Blog";
 
 function App() {
   return (
     <PageBackground>
       <PageNavMenu />
-      <article className="flex items-center flex-col">
-        <h2 className="text-4xl">Chandler Trousdale</h2>
-        <p>Full-Stack Software Engineer</p>
-        <p>Ex-Microsoft</p>
-      </article>
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/blog" element={<Blog />} />
+      </Routes>
     </PageBackground>
   );
 }
