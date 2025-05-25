@@ -5,6 +5,7 @@ import {
   NavigationMenuList,
 } from "./ui/navigation-menu";
 import { NavigationMenuLink } from "@radix-ui/react-navigation-menu";
+import { Separator } from "./ui/separator";
 
 const PageNavMenu = (): React.JSX.Element => {
   return (
@@ -16,11 +17,13 @@ const PageNavMenu = (): React.JSX.Element => {
             <NavigationMenuLink>About me</NavigationMenuLink>
             {/* </Link> */}
           </NavigationMenuItem>
+          <Separator orientation="vertical" />
           <NavigationMenuItem>
             {/* <Link> */}
             <NavigationMenuLink>Blog</NavigationMenuLink>
             {/* </Link> */}
           </NavigationMenuItem>
+          <Separator orientation="vertical" />
           <NavigationMenuItem>
             {/* <Link> */}
             <NavigationMenuLink>GitHub</NavigationMenuLink>
