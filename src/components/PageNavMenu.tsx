@@ -13,7 +13,7 @@ const PageNavMenu = (): React.JSX.Element => (
   <div className="sticky w-full top-0 z-50">
     <div className="flex items-center ">
       <NavigationMenu className="bg-stone-800/80 backdrop-blur-md max-w-full">
-        <NavigationMenuList className="space-x-4 flex items-center">
+        <NavigationMenuList className="space-x-4 flex items-center text-white">
           <NavigationMenuItem>
             <NavLink
               to="/"

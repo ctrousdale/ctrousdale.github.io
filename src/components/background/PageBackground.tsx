@@ -1,8 +1,8 @@
 import * as React from "react";
 
 const LazyDynamicBackground = React.lazy(() =>
-  import("./DynamicBackground.tsx").then((module) => ({
-    default: module.default,
+  import("./DynamicBackground").then((module) => ({
+    default: module.DynamicBackground,
   })),
 );
 
@@ -12,9 +12,13 @@ type IBackgroundProps = {
 };
 
 const PageBackground = (props: IBackgroundProps): React.JSX.Element => {
-  const [showDynamicBackground, setShowDynamicBackgroud] =
+  const [showDynamicBackground, setShowDynamicBackground] =
     React.useState(false);
-  // TODO: Check when pageload is done, then load the dynamic background
+
+  React.useEffect(() => {
+    setShowDynamicBackground(true);
+  }, []);
+
   return (
     <div className="relative">
       {/* Static content */}

@@ -1,5 +1,5 @@
-import * as React from "react";
-import PageBackground from "./components/PageBackground";
+// import * as React from "react";
+import PageBackground from "./components/background/PageBackground.tsx";
 import PageNavMenu from "./components/PageNavMenu";
 import MainPage from "./pages/MainPage";
 import { Route, Routes } from "react-router";
