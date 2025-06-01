@@ -7,7 +7,7 @@ type IBackgroundProps = {
   enableDynamicBackground?: boolean;
 };
 
-const StaticBackground = (): React.JSX.Element => (
+const StaticBackground: React.FC = () => (
   <div
     className="
         fixed 
@@ -23,7 +23,9 @@ const StaticBackground = (): React.JSX.Element => (
   />
 );
 
-const PageBackground = (props: IBackgroundProps): React.JSX.Element => {
+const PageBackground: React.FC<IBackgroundProps> = (
+  props: IBackgroundProps,
+) => {
   const [showDynamicBackground, setShowDynamicBackground] =
     React.useState(false);
 
