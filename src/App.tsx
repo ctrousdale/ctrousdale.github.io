@@ -10,11 +10,13 @@ function App() {
   return (
     <PageBackground>
       <PageNavMenu />
-      <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/:slug" element={<BlogPostController />} />
-      </Routes>
+      <div className="mx-10 mt-20">
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPostController />} />
+        </Routes>
+      </div>
     </PageBackground>
   );
 }

@@ -5,15 +5,14 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "./ui/navigation-menu";
-import { Separator } from "./ui/separator";
 import { NavLink } from "react-router";
-import { FaGithub } from "react-icons/fa6";
+import { FaGithub, FaLinkedin } from "react-icons/fa6";
 
 const PageNavMenu = (): React.JSX.Element => (
-  <div className="sticky w-full top-0 z-50">
-    <div className="flex items-center ">
-      <NavigationMenu className="bg-stone-800/80 backdrop-blur-md max-w-full">
-        <NavigationMenuList className="space-x-4 flex items-center text-white">
+  <div className="sticky top-0 z-50 w-full">
+    <div className="flex items-center">
+      <NavigationMenu className="max-w-full bg-stone-800/80 backdrop-blur-md">
+        <NavigationMenuList className="flex items-center gap-x-4 text-white">
           <NavigationMenuItem>
             <NavLink
               to="/"
@@ -24,7 +23,6 @@ const PageNavMenu = (): React.JSX.Element => (
               </NavigationMenuLink>
             </NavLink>
           </NavigationMenuItem>
-          <Separator orientation="vertical" />
           <NavigationMenuItem>
             <NavLink
               to="/blog"
@@ -33,7 +31,6 @@ const PageNavMenu = (): React.JSX.Element => (
               <NavigationMenuLink className="text-xl">Blog</NavigationMenuLink>
             </NavLink>
           </NavigationMenuItem>
-          <Separator orientation="vertical" />
           <NavigationMenuItem>
             <NavLink
               to="https://github.com/ctrousdale"
@@ -43,6 +40,18 @@ const PageNavMenu = (): React.JSX.Element => (
             >
               <NavigationMenuLink>
                 <FaGithub />
+              </NavigationMenuLink>
+            </NavLink>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <NavLink
+              to="https://www.linkedin.com/in/ctrousdale/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={({ isActive }) => (isActive ? "text-amber-200" : "")}
+            >
+              <NavigationMenuLink>
+                <FaLinkedin />
               </NavigationMenuLink>
             </NavLink>
           </NavigationMenuItem>
