@@ -1,5 +1,8 @@
 import * as THREE from "three";
 import * as tf from "@tensorflow/tfjs";
+import { initTensorFlow } from "./TFModel";
+
+// #region Types
 
 interface IFloatingShape {
   mesh: THREE.Mesh;
@@ -9,6 +12,8 @@ interface IFloatingShape {
   frequency: THREE.Vector3;
   offset: THREE.Vector3;
 }
+
+// #endregion Types
 
 const geometries = [
   new THREE.BoxGeometry(0.5, 0.5, 0.5),
@@ -66,24 +71,6 @@ const createShape = (
       (Math.random() - 0.5) * 0.02,
     ),
   };
-};
-
-const initTensorFlow = async (modelRef: tf.LayersModel | null) => {
-  await tf.ready();
-
-  const model = tf.sequential({
-    layers: [
-      tf.layers.dense({ units: 8, activation: "relu", inputShape: [3] }),
-      tf.layers.dense({ units: 8, activation: "relu" }),
-      tf.layers.dense({ units: 3, activation: "tanh" }),
-    ],
-  });
-
-  const dummyInput = tf.randomNormal([1, 3]);
-  model.predict(dummyInput);
-  dummyInput.dispose();
-
-  modelRef = model;
 };
 
 export const setupAndRegister = async (
