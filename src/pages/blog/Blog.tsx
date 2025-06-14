@@ -19,7 +19,24 @@ export const Blog = (): React.JSX.Element => {
             "TensorFlow.js",
           ]}
         />
-        {/* <BlogCard /> */}
+        <BlogCard
+          title="ESP32 Wifi Sniffer"
+          description="A hardware WiFi sniffer for network recon"
+          content={
+            "I wanted to test my new WiFi7 router's WPA3 security against typical WiFi vulnerabilities that we learned in university. Instead of buying an OOB solution, I made a scanner myself!"
+          }
+          badges={[
+            "ESP32C6",
+            "ESP-IDF",
+            "FreeRTOS",
+            "C",
+            "C++",
+            "C#",
+            "Network Security",
+            "IoT",
+            "Wireshark",
+          ]}
+        />
       </div>
     </div>
   );
