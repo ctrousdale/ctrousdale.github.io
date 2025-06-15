@@ -14,18 +14,18 @@ const onHover = (props: NavLinkRenderProps) =>
 
 const PageNavMenu = (): React.JSX.Element => (
   <div className="sticky top-0 z-50 w-full">
-    <NavigationMenu className="max-w-full bg-stone/5 shadow-2xl backdrop-blur-sm backdrop-saturate-100">
-      <NavigationMenuList className="flex items-center gap-x-4 text-white">
+    <NavigationMenu className="bg-stone/5 max-w-full border-b border-b-stone-400 shadow-2xl backdrop-blur-sm backdrop-saturate-100">
+      <NavigationMenuList className="flex gap-x-4 items-center align-middle text-white">
         <NavigationMenuItem>
           <NavLink to="/" className={onHover}>
-            <NavigationMenuLink className="text-xl">
+            <NavigationMenuLink className="text-base">
               About me
             </NavigationMenuLink>
           </NavLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavLink to="/blog" className={onHover}>
-            <NavigationMenuLink className="text-xl">Blog</NavigationMenuLink>
+            <NavigationMenuLink className="text-base">Blog</NavigationMenuLink>
           </NavLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
