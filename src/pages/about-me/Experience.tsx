@@ -1,3 +1,4 @@
+import GlassCard from "@/components/glass-card";
 import {
   Card,
   CardContent,
@@ -9,7 +10,7 @@ import {
 const Experience = (): React.JSX.Element => {
   return (
     <div className="flex flex-col gap-y-5">
-      <Card className="w-full max-w-xl border border-white/30 bg-white/10 shadow-2xl backdrop-blur-xl backdrop-saturate-150">
+      <GlassCard>
         <CardHeader>
           <CardTitle className="text-neutral-50">Microsoft</CardTitle>
           <CardDescription className="text-neutral-300">
@@ -62,7 +63,7 @@ const Experience = (): React.JSX.Element => {
             Won the 2023 Amplify Protect Capture The Flag (CTF) competition.
           </p>
         </CardContent>
-      </Card>
+      </GlassCard>
       <Card className="w-full max-w-xl border border-white/30 bg-white/10 shadow-2xl backdrop-blur-xl backdrop-saturate-150">
         <CardHeader>
           <CardTitle className="text-neutral-50">OMP</CardTitle>

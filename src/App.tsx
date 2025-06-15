@@ -1,7 +1,7 @@
 // import * as React from "react";
 import PageBackground from "./components/background/PageBackground.tsx";
 import PageNavMenu from "./components/PageNavMenu";
-import MainPage from "./pages/MainPage";
+import MainPage from "./pages/about-me/MainPage.tsx";
 import { Route, Routes } from "react-router";
 import { Blog } from "./pages/blog/Blog.tsx";
 import BlogPostController from "./pages/blog/posts/BlogPostController.tsx";
