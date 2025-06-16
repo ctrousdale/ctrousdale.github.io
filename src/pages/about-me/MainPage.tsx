@@ -121,12 +121,12 @@ const Sources = (): React.JSX.Element => (
 
 const Projects = (): React.JSX.Element => (
   <div className="mx-auto w-full max-w-3xl">
-    <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 ">
       <AnimatedBorderGlassCard borderColor="border-emerald-500">
         <CardHeader>
           <CardTitle className="text-neutral-50">Portfolio Website</CardTitle>
         </CardHeader>
-        <CardContent className="flex flex-col gap-3 text-neutral-50">
+        <CardContent className="mb-2 flex flex-col gap-3 text-neutral-50">
           <p>
             This very website! I wanted to work on web development skills
             outside the context of work, without using OOTB enterprise
@@ -138,20 +138,20 @@ const Projects = (): React.JSX.Element => (
             the next position based on your inputs.
           </p>
         </CardContent>
-        <CardFooter className="flex flex-wrap gap-0.5">
+        <CardFooter className="mt-auto flex flex-wrap gap-0.5">
           <Badge>TypeScript</Badge>
           <Badge>Vite</Badge>
           <Badge>ThreeJS</Badge>
           <Badge>TensorFlowJS</Badge>
         </CardFooter>
       </AnimatedBorderGlassCard>
-      <GlassCard className="border border-emerald-500">
+      <AnimatedBorderGlassCard borderColor="border-emerald-500">
         <CardHeader>
           <CardTitle className="text-neutral-50">
             ESP32C6 WiFi Packet Sniffer
           </CardTitle>
         </CardHeader>
-        <CardContent className="text-neutral-50">
+        <CardContent className="mb-2 text-neutral-50">
           <p>
             Instead of buying a Flipper Zero or Hak5 WiFi Pineapple, I wanted to
             explore the difficulty of implementing my own pentesting tools. I
@@ -159,7 +159,7 @@ const Projects = (): React.JSX.Element => (
             scanned packets to a Wireshark instance for analysis.
           </p>
         </CardContent>
-        <CardFooter className="flex flex-wrap gap-0.5">
+        <CardFooter className="mt-auto flex flex-wrap gap-0.5">
           <Badge>C</Badge>
           <Badge>C++</Badge>
           <Badge>C#</Badge>
@@ -167,19 +167,19 @@ const Projects = (): React.JSX.Element => (
           <Badge>ESP-IDF</Badge>
           <Badge>Wireshark</Badge>
         </CardFooter>
-      </GlassCard>
-      <GlassCard className="border border-emerald-500">
+      </AnimatedBorderGlassCard>
+      <AnimatedBorderGlassCard borderColor="border-emerald-500">
         <CardHeader>
           <CardTitle className="text-neutral-50">Discord Bot</CardTitle>
         </CardHeader>
-        <CardContent className="flex flex-col gap-y-1.5 text-sm text-neutral-50">
+        <CardContent className="mb-2 flex flex-col gap-y-1.5 text-sm text-neutral-50">
           <p>
             Created a Discord bot to solve common user complaints with the
             platform, including enhanced video embedding for social media
             websites, and AI integration via ChatGPT,{" "}
           </p>
         </CardContent>
-        <CardFooter className="flex flex-wrap gap-0.5">
+        <CardFooter className="mt-auto flex flex-wrap gap-0.5">
           <Badge>C#</Badge>
           <Badge>.NET</Badge>
           <Badge>DSharpPlus</Badge>
@@ -187,7 +187,7 @@ const Projects = (): React.JSX.Element => (
           <Badge>Docker</Badge>
           <Badge>Azure</Badge>
         </CardFooter>
-      </GlassCard>
+      </AnimatedBorderGlassCard>
     </div>
   </div>
 );
