@@ -10,7 +10,7 @@ function App() {
   return (
     <PageBackground>
       <PageNavMenu />
-      <div className="mx-10 mt-20">
+      <div className="mx-3 md:mx-10 mt-20">
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/blog" element={<Blog />} />

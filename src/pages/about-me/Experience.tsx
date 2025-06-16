@@ -1,6 +1,5 @@
-import GlassCard from "@/components/glass-card";
+import { GlassCard } from "@/components/glass-card";
 import {
-  Card,
   CardContent,
   CardDescription,
   CardHeader,
@@ -10,7 +9,7 @@ import {
 const Experience = (): React.JSX.Element => {
   return (
     <div className="flex flex-col gap-y-5">
-      <GlassCard>
+      <GlassCard className="border border-red-500">
         <CardHeader>
           <CardTitle className="text-neutral-50">Microsoft</CardTitle>
           <CardDescription className="text-neutral-300">
@@ -18,7 +17,7 @@ const Experience = (): React.JSX.Element => {
             <p>Full-Stack Software Engineer</p>
           </CardDescription>
         </CardHeader>
-        <CardContent className="flex flex-col gap-y-1.5 text-sm text-neutral-50">
+        <CardContent className="flex flex-col gap-y-1.5 text-neutral-50">
           <p>
             Created Billing and Usage tools that dramatically clarified Copilot
             Agent cost information for customers.
@@ -64,7 +63,7 @@ const Experience = (): React.JSX.Element => {
           </p>
         </CardContent>
       </GlassCard>
-      <Card className="w-full max-w-xl border border-white/30 bg-white/10 shadow-2xl backdrop-blur-xl backdrop-saturate-150">
+      <GlassCard className="border border-red-500">
         <CardHeader>
           <CardTitle className="text-neutral-50">OMP</CardTitle>
           <CardDescription className="text-neutral-300">
@@ -72,7 +71,7 @@ const Experience = (): React.JSX.Element => {
             <p>Infrastructure Software Engineer</p>
           </CardDescription>
         </CardHeader>
-        <CardContent className="flex flex-col gap-y-1.5 text-sm text-neutral-50">
+        <CardContent className="flex flex-col gap-y-1.5 text-neutral-50">
           <p>
             Created a C++ JSON serializer to support an internal REST API. This
             let us send/receive rich types such as
@@ -86,8 +85,8 @@ const Experience = (): React.JSX.Element => {
             leading to more modern usage patterns.
           </p>
         </CardContent>
-      </Card>
-      <Card className="w-full max-w-xl border border-white/30 bg-white/10 shadow-2xl backdrop-blur-xl backdrop-saturate-150">
+      </GlassCard>
+      <GlassCard className="border border-red-500">
         <CardHeader>
           <CardTitle className="text-neutral-50">
             University of Florida - Machine Learning and Sensing Lab
@@ -105,10 +104,21 @@ const Experience = (): React.JSX.Element => {
             </a>
           </CardDescription>
         </CardHeader>
-        <CardContent className="flex flex-col gap-y-1.5 text-sm text-neutral-50">
-          <p></p>
+        <CardContent className="flex flex-col gap-y-1.5 text-neutral-50">
+          <p>
+            Worked with graduate mentor to develop components of bag-level
+            classification to the spec designed by our faculty advisor.
+          </p>
+          <p>
+            Developed several scripts which supported scheduling, early-exit,
+            and result saving for ML model training. This autonomous setup
+            allowed us to run jobs without physically going to the lab and
+            entering the secured environment in the middle of the night or on
+            the weekend. The increased GPU pool utilization allowed us to
+            complete model training significantly faster than before.
+          </p>
         </CardContent>
-      </Card>
+      </GlassCard>
     </div>
   );
 };

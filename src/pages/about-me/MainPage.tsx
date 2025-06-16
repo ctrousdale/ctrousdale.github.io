@@ -13,36 +13,50 @@ import {
 import Experience from "./Experience";
 import { TbBrandCpp, TbBrandCSharp, TbBrandDocker } from "react-icons/tb";
 import { AiOutlineDotNet } from "react-icons/ai";
+import { AnimatedBorderGlassCard, GlassCard } from "@/components/glass-card";
+import {
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 const Intro = (): React.JSX.Element => (
   <>
-    <section className="flex w-1/2 flex-col gap-y-3">
+    <section className="flex flex-col gap-y-3 text-center md:w-1/2 md:text-left">
       <h2 className="text-5xl">Chandler Trousdale</h2>
       <p>Full-Stack Software Engineer</p>
     </section>
-    <section className="w-1/2">
+    <section className="md:w-1/2">
       <div className="flex flex-col gap-y-2">
-        <p className="text-lg">
+        <p className="text-center text-lg md:text-left">
           I prioritize fundamentals, iterative improvement, and modern
           technologies.
         </p>
         <div className="flex flex-col gap-y-1 font-mono">
-          <div className="flex flex-wrap items-center">
-            <p className="pr-1">
+          <div className="flex flex-wrap">
+            <p className="w-full pr-1 text-center md:text-left">
               TypeScript/JavaScript, React, Redux, FluentUI, TensorflowJS
             </p>
           </div>
-          <div className="flex flex-wrap items-center">
-            <p>C#, ASP.NET, .NET MAUI, Blazor</p>
+          <div className="flex flex-wrap">
+            <p className="w-full text-center md:text-left">
+              C#, ASP.NET, .NET MAUI, Blazor
+            </p>
           </div>
-          <div className="flex flex-wrap items-center">
-            <p>C++, C</p>
+          <div className="flex flex-wrap">
+            <p className="w-full text-center md:text-left">C++, C</p>
           </div>
-          <div className="flex flex-wrap items-center">
-            <p>Python, Jupyter notebooks, Pandas, Numpy, Scikit-learn</p>
+          <div className="flex flex-wrap">
+            <p className="w-full pr-1 text-center md:text-left">
+              Python, Jupyter notebooks, Pandas, Numpy, Scikit-learn
+            </p>
           </div>
-          <div className="flex flex-wrap items-center">
-            <p>Azure, Docker</p>
+          <div className="flex flex-wrap">
+            <p className="w-full pr-1 text-center md:text-left">
+              Azure, Docker
+            </p>
           </div>
         </div>
       </div>
@@ -51,7 +65,7 @@ const Intro = (): React.JSX.Element => (
 );
 
 const TechIcons = (): React.JSX.Element => (
-  <>
+  <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-3">
     <div className="flex items-center gap-x-2 pr-4">
       <FaJs />
       <FaReact />
@@ -77,11 +91,11 @@ const TechIcons = (): React.JSX.Element => (
       <VscAzure />
       <TbBrandDocker />
     </div>
-  </>
+  </div>
 );
 
 const Sources = (): React.JSX.Element => (
-  <p>
+  <p className="text-center text-neutral-50">
     The design language for this site was heavily inspired by{" "}
     <a
       href="https://brittanychiang.com/"
@@ -104,18 +118,94 @@ const Sources = (): React.JSX.Element => (
   </p>
 );
 
+const Projects = (): React.JSX.Element => (
+  <div className="mx-auto w-full max-w-3xl">
+    <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+      <AnimatedBorderGlassCard borderColor="border-emerald-500">
+        <CardHeader>
+          <CardTitle className="text-neutral-50">Portfolio Website</CardTitle>
+        </CardHeader>
+        <CardContent className="flex flex-col gap-3 text-neutral-50">
+          <p>
+            This very website! I wanted to work on web development skills
+            outside the context of work, without using OOTB enterprise
+            frameworks.
+          </p>
+          <p>
+            The ThreeJS shapes in the background aren't statically rendered -
+            their movements are influenced by a TensorflowJS model that predicts
+            the next position based on your inputs.
+          </p>
+        </CardContent>
+        <CardFooter className="flex flex-wrap gap-0.5">
+          <Badge>TypeScript</Badge>
+          <Badge>Vite</Badge>
+          <Badge>ThreeJS</Badge>
+          <Badge>TensorFlowJS</Badge>
+        </CardFooter>
+      </AnimatedBorderGlassCard>
+      <GlassCard className="border border-emerald-500">
+        <CardHeader>
+          <CardTitle className="text-neutral-50">
+            ESP32C6 WiFi Packet Sniffer
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="text-neutral-50">
+          <p>
+            Instead of buying a Flipper Zero or Hak5 WiFi Pineapple, I wanted to
+            explore the difficulty of implementing my own pentesting tools. I
+            wrote a simple commandline tool that creates a pipe and forwards the
+            scanned packets to a Wireshark instance for analysis.
+          </p>
+        </CardContent>
+        <CardFooter className="flex flex-wrap gap-0.5">
+          <Badge>C</Badge>
+          <Badge>C++</Badge>
+          <Badge>C#</Badge>
+          <Badge>FreeRTOS</Badge>
+          <Badge>ESP-IDF</Badge>
+          <Badge>Wireshark</Badge>
+        </CardFooter>
+      </GlassCard>
+      <GlassCard className="border border-emerald-500">
+        <CardHeader>
+          <CardTitle className="text-neutral-50">Discord Bot</CardTitle>
+        </CardHeader>
+        <CardContent className="flex flex-col gap-y-1.5 text-sm text-neutral-50">
+          <p>
+            Created a Discord bot to solve common user complaints with the
+            platform, including enhanced video embedding for social media
+            websites, and AI integration via ChatGPT,{" "}
+          </p>
+        </CardContent>
+        <CardFooter className="flex flex-wrap gap-0.5">
+          <Badge>C#</Badge>
+          <Badge>.NET</Badge>
+          <Badge>DSharpPlus</Badge>
+          <Badge>OpenAI</Badge>
+          <Badge>Docker</Badge>
+          <Badge>Azure</Badge>
+        </CardFooter>
+      </GlassCard>
+    </div>
+  </div>
+);
+
 const MainPage = (): React.JSX.Element => (
   <div className="text-neutral-100">
-    <article className="flex flex-col items-start gap-5 md:flex-row">
+    <article className="flex flex-col gap-5 md:flex-row md:items-start">
       <Intro />
     </article>
-    <article className="align-center mx-auto my-10 text-lg flex w-fit items-center justify-center gap-x-2 rounded-2xl border px-2 py-1">
+    <article className="align-center mx-auto my-10 flex w-fit items-center justify-center gap-x-2 rounded-2xl border px-2 py-1 text-lg">
       <TechIcons />
     </article>
     <article className="flex flex-col items-center">
       <Experience />
     </article>
-    <article className="flex flex-col items-center py-15">
+    <article className="flex flex-col items-center pt-20">
+      <Projects />
+    </article>
+    <article className="flex flex-col items-center py-10 md:py-15">
       <Sources />
     </article>
   </div>
