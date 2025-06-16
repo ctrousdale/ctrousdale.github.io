@@ -1,4 +1,4 @@
-import { GlassCard } from "@/components/glass-card";
+import GlassCard from "@/components/glass-card";
 import {
   CardContent,
   CardDescription,

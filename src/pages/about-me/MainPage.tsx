@@ -13,7 +13,7 @@ import {
 import Experience from "./Experience";
 import { TbBrandCpp, TbBrandCSharp, TbBrandDocker } from "react-icons/tb";
 import { AiOutlineDotNet } from "react-icons/ai";
-import { AnimatedBorderGlassCard, GlassCard } from "@/components/glass-card";
+import GlassCard from "@/components/glass-card";
 import {
   CardContent,
   CardFooter,
@@ -21,6 +21,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import AnimatedBorderGlassCard from "@/components/animated-border-glass-card";
 
 const Intro = (): React.JSX.Element => (
   <>
