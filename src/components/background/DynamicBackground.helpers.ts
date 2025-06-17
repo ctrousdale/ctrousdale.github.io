@@ -79,7 +79,7 @@ export const setupAndRegister = async (
   rendererRef: React.RefObject<THREE.WebGLRenderer | null>,
   animationIdRef: React.RefObject<number | null>,
 ) => {
-  let [model, mount, renderer, animationId] = [
+  let [model, mount, renderer, _animationId] = [
     modelRef.current,
     mountRef.current,
     rendererRef.current,
@@ -131,7 +131,7 @@ export const setupAndRegister = async (
     });
 
     renderer!.render(scene, camera);
-    animationId = requestAnimationFrame(animate);
+    _animationId = requestAnimationFrame(animate);
   };
 
   animate();

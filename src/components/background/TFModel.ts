@@ -10,7 +10,7 @@ interface IUserInput {
 const MAX_INPUT_LENGTH = 10000;
 const USER_INPUTS: IUserInput[] = [];
 
-export const initTensorFlow = async (modelRef: tf.LayersModel | null) => {
+export const initTensorFlow = async (_modelRef: tf.LayersModel | null) => {
   await tf.ready();
 
   const model = tf.sequential({
@@ -27,7 +27,7 @@ export const initTensorFlow = async (modelRef: tf.LayersModel | null) => {
     loss: "meanSquaredError",
   });
 
-  modelRef = model;
+  _modelRef = model;
 };
 
 export const addUserInput = (input: IUserInput) => {
