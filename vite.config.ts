@@ -6,7 +6,7 @@ import pluginChecker from "vite-plugin-checker";
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "ctrousdale.github.io",
+  base: "/",
   plugins: [
     react(),
     tailwindcss(),
@@ -14,7 +14,6 @@ export default defineConfig({
       typescript: true,
     }),
   ],
-
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
