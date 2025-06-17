@@ -13,9 +13,9 @@ import {
 import Experience from "./Experience";
 import { TbBrandCpp, TbBrandCSharp, TbBrandDocker } from "react-icons/tb";
 import { AiOutlineDotNet } from "react-icons/ai";
-import GlassCard from "@/components/glass-card";
 import {
   CardContent,
+  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
@@ -121,10 +121,13 @@ const Sources = (): React.JSX.Element => (
 
 const Projects = (): React.JSX.Element => (
   <div className="mx-auto w-full max-w-3xl">
-    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 ">
+    <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
       <AnimatedBorderGlassCard borderColor="border-emerald-500">
         <CardHeader>
           <CardTitle className="text-neutral-50">Portfolio Website</CardTitle>
+          <CardDescription className="text-neutral-300">
+            June 2025
+          </CardDescription>
         </CardHeader>
         <CardContent className="mb-2 flex flex-col gap-3 text-neutral-50">
           <p>
@@ -138,7 +141,7 @@ const Projects = (): React.JSX.Element => (
             the next position based on your inputs.
           </p>
         </CardContent>
-        <CardFooter className="mt-auto flex flex-wrap gap-0.5">
+        <CardFooter className="mt-auto gap-0.5">
           <Badge>TypeScript</Badge>
           <Badge>Vite</Badge>
           <Badge>ThreeJS</Badge>
@@ -150,16 +153,19 @@ const Projects = (): React.JSX.Element => (
           <CardTitle className="text-neutral-50">
             ESP32C6 WiFi Packet Sniffer
           </CardTitle>
+          <CardDescription className="text-neutral-300">
+            March 2025
+          </CardDescription>
         </CardHeader>
         <CardContent className="mb-2 text-neutral-50">
           <p>
             Instead of buying a Flipper Zero or Hak5 WiFi Pineapple, I wanted to
-            explore the difficulty of implementing my own pentesting tools. I
-            wrote a simple commandline tool that creates a pipe and forwards the
-            scanned packets to a Wireshark instance for analysis.
+            challenge myself by implementing my own pentesting tools. I wrote a
+            simple commandline tool that creates a pipe and forwards the scanned
+            packets to a Wireshark instance for analysis.
           </p>
         </CardContent>
-        <CardFooter className="mt-auto flex flex-wrap gap-0.5">
+        <CardFooter className="mt-auto gap-0.5">
           <Badge>C</Badge>
           <Badge>C++</Badge>
           <Badge>C#</Badge>
@@ -171,21 +177,71 @@ const Projects = (): React.JSX.Element => (
       <AnimatedBorderGlassCard borderColor="border-emerald-500">
         <CardHeader>
           <CardTitle className="text-neutral-50">Discord Bot</CardTitle>
+          <CardDescription className="text-neutral-300">
+            2023 - Current
+          </CardDescription>
         </CardHeader>
         <CardContent className="mb-2 flex flex-col gap-y-1.5 text-sm text-neutral-50">
           <p>
             Created a Discord bot to solve common user complaints with the
-            platform, including enhanced video embedding for social media
-            websites, and AI integration via ChatGPT,{" "}
+            platform including enhanced video embedding for social media
+            websites, easy retrieval of tagged content, and AI integration via
+            ChatGPT.
           </p>
         </CardContent>
-        <CardFooter className="mt-auto flex flex-wrap gap-0.5">
+        <CardFooter className="mt-auto gap-0.5">
           <Badge>C#</Badge>
           <Badge>.NET</Badge>
           <Badge>DSharpPlus</Badge>
           <Badge>OpenAI</Badge>
           <Badge>Docker</Badge>
           <Badge>Azure</Badge>
+        </CardFooter>
+      </AnimatedBorderGlassCard>
+      <AnimatedBorderGlassCard borderColor="border-emerald-500">
+        <CardHeader>
+          <CardTitle className="text-neutral-50">TinyML Plant Growth</CardTitle>
+          <CardDescription className="text-neutral-300">
+            August - May 2021
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="mb-2 flex flex-col gap-y-1.5 text-sm text-neutral-50">
+          <p>
+            Performed some agricultural experiments on optimal growing
+            conditions of green onions. Used the results of this research to
+            train an ML model that could optimize several factors (water level,
+            light, relative humidity, etc.) to maximize growth rate. This model
+            was then miniturized via TinyML and deployed in-memory to an
+            Arduino.
+          </p>
+        </CardContent>
+        <CardFooter className="mt-auto gap-0.5">
+          <Badge>Python</Badge>
+          <Badge>Sklearn</Badge>
+          <Badge>Arduino</Badge>
+        </CardFooter>
+      </AnimatedBorderGlassCard>
+      <AnimatedBorderGlassCard borderColor="border-emerald-500">
+        <CardHeader>
+          <CardTitle className="text-neutral-50">
+            License Plate and Shape Detection
+          </CardTitle>
+          <CardDescription className="text-neutral-300">
+            January - April 2018
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="mb-2 flex flex-col gap-y-1.5 text-sm text-neutral-50">
+          <p>
+            Developed a C++ application that can detect image shapes and extract
+            license plates from images. This was a fundamentals group project
+            that introduced us to computer vision and ML techniques such as
+            contour extraction and image preprocessing.
+          </p>
+        </CardContent>
+        <CardFooter className="mt-auto gap-0.5">
+          <Badge>C++</Badge>
+          <Badge>OpenCV</Badge>
+          <Badge>Dlib</Badge>
         </CardFooter>
       </AnimatedBorderGlassCard>
     </div>
@@ -197,9 +253,14 @@ const MainPage = (): React.JSX.Element => (
     <article className="flex flex-col gap-5 md:flex-row md:items-start">
       <Intro />
     </article>
-    <article className="align-center mx-auto my-10 flex w-fit items-center justify-center gap-x-2 rounded-2xl border px-2 py-1 text-lg">
-      <TechIcons />
-    </article>
+    <p className="my-10 text-center">
+      This website is an interactive art piece! By interacting with this site
+      you're training an ML model that influences the movement of the shapes in
+      the background.
+    </p>
+    {/* <article className="align-center mx-auto my-10 flex w-fit items-center justify-center gap-x-2 rounded-2xl border px-2 py-1 text-lg"> */}
+    {/*   <TechIcons /> */}
+    {/* </article> */}
     <article className="flex flex-col items-center">
       <Experience />
     </article>

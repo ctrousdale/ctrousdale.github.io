@@ -39,7 +39,7 @@ const AnimatedBorderGlassCard = (
   return (
     <Card
       className={clsx(
-        "flex flex-col h-full relative overflow-hidden bg-white/10 shadow-2xl backdrop-blur-xl backdrop-saturate-150",
+        "relative flex h-full flex-col overflow-hidden bg-white/10 shadow-2xl backdrop-blur-xl backdrop-saturate-150",
         borderColor,
       )}
       onMouseEnter={() => setIsHovered(true)}
@@ -66,7 +66,7 @@ const AnimatedBorderGlassCard = (
           />
         )}
       </AnimatePresence>
-      <div className="relative flex flex-col h-full z-10">{children}</div>
+      <div className="relative z-10 flex h-full flex-col">{children}</div>
     </Card>
   );
 };

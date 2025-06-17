@@ -20,14 +20,17 @@ const Experience = (): React.JSX.Element => {
         <CardContent className="flex flex-col gap-y-1.5 text-neutral-50">
           <p>
             Created Billing and Usage tools that dramatically clarified Copilot
-            Agent cost information for customers.
+            Agent cost information for customers. This gave tenant admins the
+            ability to intelligently manage costs for their organization's
+            Agents without disrupting employee workflows.
           </p>
           <p>
-            Developed E2E frameworks, enabling my entire team to write end-user
-            diagnostics for solving common end-user scenarios. Surfaced these
-            diagnostics on the Microsoft Admin Center for broad usage across
-            tenants. Expanded this project via the Windows 11 Get Help App to
-            bring these solutions outside of Azure and onto user machines.
+            Built a complex E2E framework that enabled my entire team to create
+            automated diagnostics capable of resolving common customer issues
+            with minimal human intervention. These diagnostics were integrated
+            into the Microsoft Admin Center for enterprise-wide deployment and
+            later expanded to the Windows 11 Get Help App, bringing automated
+            troubleshooting directly to user devices.
           </p>
           <p>
             Architected a unified lookup tool that consolidated multiple
