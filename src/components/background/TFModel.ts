@@ -30,7 +30,7 @@ export const initTensorFlow = async (modelRef: tf.LayersModel | null) => {
   modelRef = model;
 };
 
-const addUserInput = (input: IUserInput) => {
+export const addUserInput = (input: IUserInput) => {
   USER_INPUTS.push(input);
   if (USER_INPUTS.length > MAX_INPUT_LENGTH) {
     USER_INPUTS.shift();

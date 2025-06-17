@@ -1,18 +1,5 @@
 import * as React from "react";
-import { VscAzure } from "react-icons/vsc";
-import { FaJs, FaReact, FaPython } from "react-icons/fa6";
-import {
-  SiBlazor,
-  SiJupyter,
-  SiNumpy,
-  SiPandas,
-  SiRedux,
-  SiScikitlearn,
-  SiTensorflow,
-} from "react-icons/si";
 import Experience from "./Experience";
-import { TbBrandCpp, TbBrandCSharp, TbBrandDocker } from "react-icons/tb";
-import { AiOutlineDotNet } from "react-icons/ai";
 import {
   CardContent,
   CardDescription,
@@ -65,35 +52,36 @@ const Intro = (): React.JSX.Element => (
   </>
 );
 
-const TechIcons = (): React.JSX.Element => (
-  <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-3">
-    <div className="flex items-center gap-x-2 pr-4">
-      <FaJs />
-      <FaReact />
-      <SiRedux />
-      <SiTensorflow />
-    </div>
-    <div className="flex items-center gap-x-2 pr-4">
-      <TbBrandCSharp />
-      <AiOutlineDotNet />
-      <SiBlazor />
-    </div>
-    <div className="flex items-center gap-x-2 pr-4">
-      <TbBrandCpp />
-    </div>
-    <div className="flex items-center gap-x-2 pr-4">
-      <FaPython />
-      <SiPandas />
-      <SiJupyter />
-      <SiNumpy />
-      <SiScikitlearn />
-    </div>
-    <div className="flex items-center gap-x-2">
-      <VscAzure />
-      <TbBrandDocker />
-    </div>
-  </div>
-);
+// Currently unused:
+// const TechIcons = (): React.JSX.Element => (
+//   <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-3">
+//     <div className="flex items-center gap-x-2 pr-4">
+//       <FaJs />
+//       <FaReact />
+//       <SiRedux />
+//       <SiTensorflow />
+//     </div>
+//     <div className="flex items-center gap-x-2 pr-4">
+//       <TbBrandCSharp />
+//       <AiOutlineDotNet />
+//       <SiBlazor />
+//     </div>
+//     <div className="flex items-center gap-x-2 pr-4">
+//       <TbBrandCpp />
+//     </div>
+//     <div className="flex items-center gap-x-2 pr-4">
+//       <FaPython />
+//       <SiPandas />
+//       <SiJupyter />
+//       <SiNumpy />
+//       <SiScikitlearn />
+//     </div>
+//     <div className="flex items-center gap-x-2">
+//       <VscAzure />
+//       <TbBrandDocker />
+//     </div>
+//   </div>
+// );
 
 const Sources = (): React.JSX.Element => (
   <p className="text-center text-neutral-50">
