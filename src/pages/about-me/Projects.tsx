@@ -7,36 +7,43 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Link } from "react-router";
 
 const Projects = (): React.JSX.Element => (
   <div className="mx-auto w-full max-w-3xl">
     <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-      <AnimatedBorderGlassCard borderColor="border-emerald-500">
-        <CardHeader>
-          <CardTitle className="text-neutral-50">Portfolio Website</CardTitle>
-          <CardDescription className="text-neutral-300">
-            June 2025
-          </CardDescription>
-        </CardHeader>
-        <CardContent className="mb-2 flex flex-col gap-3 text-neutral-50">
-          <p>
-            This very website! I wanted to work on web development skills
-            outside the context of work, without using OOTB enterprise
-            frameworks.
-          </p>
-          <p>
-            The ThreeJS shapes in the background aren't statically rendered -
-            their movements are influenced by a TensorflowJS model that predicts
-            the next position based on your inputs.
-          </p>
-        </CardContent>
-        <CardFooter className="mt-auto gap-0.5">
-          <Badge>TypeScript</Badge>
-          <Badge>Vite</Badge>
-          <Badge>ThreeJS</Badge>
-          <Badge>TensorFlowJS</Badge>
-        </CardFooter>
-      </AnimatedBorderGlassCard>
+      <Link
+        to="https://github.com/ctrousdale/ctrousdale.github.io"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <AnimatedBorderGlassCard borderColor="border-emerald-500">
+          <CardHeader>
+            <CardTitle className="text-neutral-50">Portfolio Website</CardTitle>
+            <CardDescription className="text-neutral-300">
+              June 2025
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="mb-2 flex flex-col gap-3 text-neutral-50">
+            <p>
+              This very website! I wanted to work on web development skills
+              outside the context of work, without using OOTB enterprise
+              frameworks.
+            </p>
+            <p>
+              The ThreeJS shapes in the background aren't statically rendered -
+              their movements are influenced by a TensorflowJS model that
+              predicts the next position based on your inputs.
+            </p>
+          </CardContent>
+          <CardFooter className="mt-auto gap-0.5">
+            <Badge>TypeScript</Badge>
+            <Badge>Vite</Badge>
+            <Badge>ThreeJS</Badge>
+            <Badge>TensorFlowJS</Badge>
+          </CardFooter>
+        </AnimatedBorderGlassCard>
+      </Link>
       <AnimatedBorderGlassCard borderColor="border-emerald-500">
         <CardHeader>
           <CardTitle className="text-neutral-50">
