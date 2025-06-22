@@ -40,11 +40,13 @@ const MainPage = (): React.JSX.Element => (
     <article className="flex flex-col gap-5 md:flex-row md:items-start">
       <Intro />
     </article>
-    <p className="my-10 text-center">
-      This website is an interactive art piece! By interacting with this site
-      you're training an ML model that influences the movement of the shapes in
-      the background.
-    </p>
+    {/*}
+      <p className="my-10 text-center">
+        This website is an interactive art piece! By interacting with this site
+        you're training an ML model that influences the movement of the shapes in
+        the background.
+      </p>
+    */}
     {/* <article className="align-center mx-auto my-10 flex w-fit items-center justify-center gap-x-2 rounded-2xl border px-2 py-1 text-lg"> */}
     {/*   <TechIcons /> */}
     {/* </article> */}

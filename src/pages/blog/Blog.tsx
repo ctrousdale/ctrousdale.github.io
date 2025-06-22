@@ -2,7 +2,7 @@ import React from "react";
 import BlogCard from "./BlogCard";
 import { Posts } from "./blogInfo";
 
-export const Blog = (): React.JSX.Element => {
+const Blog = (): React.JSX.Element => {
   return (
     <div className="mx-auto mt-12 max-w-xl px-4 py-8">
       <div className="flex flex-col space-y-5">
@@ -44,3 +44,5 @@ export const Blog = (): React.JSX.Element => {
     </div>
   );
 };
+
+export default Blog;

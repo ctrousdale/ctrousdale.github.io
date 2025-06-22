@@ -1,4 +1,5 @@
 import AnimatedBorderGlassCard from "@/components/animated-border-glass-card";
+import GlassCard from "@/components/glass-card";
 import { Badge } from "@/components/ui/badge";
 import {
   CardContent,
@@ -44,33 +45,39 @@ const Projects = (): React.JSX.Element => (
           </CardFooter>
         </AnimatedBorderGlassCard>
       </Link>
-      <AnimatedBorderGlassCard borderColor="border-emerald-500">
-        <CardHeader>
-          <CardTitle className="text-neutral-50">
-            ESP32C6 WiFi Packet Sniffer
-          </CardTitle>
-          <CardDescription className="text-neutral-300">
-            March 2025
-          </CardDescription>
-        </CardHeader>
-        <CardContent className="mb-2 text-neutral-50">
-          <p>
-            Instead of buying a Flipper Zero or Hak5 WiFi Pineapple, I wanted to
-            challenge myself by implementing my own pentesting tools. I wrote a
-            simple commandline tool that creates a pipe and forwards the scanned
-            packets to a Wireshark instance for analysis.
-          </p>
-        </CardContent>
-        <CardFooter className="mt-auto gap-0.5">
-          <Badge>C</Badge>
-          <Badge>C++</Badge>
-          <Badge>C#</Badge>
-          <Badge>FreeRTOS</Badge>
-          <Badge>ESP-IDF</Badge>
-          <Badge>Wireshark</Badge>
-        </CardFooter>
-      </AnimatedBorderGlassCard>
-      <AnimatedBorderGlassCard borderColor="border-emerald-500">
+      <Link
+        to="https://github.com/ctrousdale/wifi-sniffer"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <AnimatedBorderGlassCard borderColor="border-emerald-500">
+          <CardHeader>
+            <CardTitle className="text-neutral-50">
+              ESP32C6 WiFi Packet Sniffer
+            </CardTitle>
+            <CardDescription className="text-neutral-300">
+              March 2025
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="mb-2 text-neutral-50">
+            <p>
+              Instead of buying a Flipper Zero or Hak5 WiFi Pineapple, I wanted
+              to challenge myself by implementing my own pentesting tools. I
+              wrote a simple commandline tool that creates a pipe and forwards
+              the scanned packets to a Wireshark instance for analysis.
+            </p>
+          </CardContent>
+          <CardFooter className="mt-auto gap-0.5">
+            <Badge>C</Badge>
+            <Badge>C++</Badge>
+            <Badge>C#</Badge>
+            <Badge>FreeRTOS</Badge>
+            <Badge>ESP-IDF</Badge>
+            <Badge>Wireshark</Badge>
+          </CardFooter>
+        </AnimatedBorderGlassCard>
+      </Link>
+      <GlassCard className="border-emerald-500">
         <CardHeader>
           <CardTitle className="text-neutral-50">Discord Bot</CardTitle>
           <CardDescription className="text-neutral-300">
@@ -85,7 +92,7 @@ const Projects = (): React.JSX.Element => (
             ChatGPT.
           </p>
         </CardContent>
-        <CardFooter className="mt-auto gap-0.5">
+        <CardFooter className="mt-auto flex flex-wrap justify-center gap-0.5">
           <Badge>C#</Badge>
           <Badge>.NET</Badge>
           <Badge>DSharpPlus</Badge>
@@ -93,8 +100,8 @@ const Projects = (): React.JSX.Element => (
           <Badge>Docker</Badge>
           <Badge>Azure</Badge>
         </CardFooter>
-      </AnimatedBorderGlassCard>
-      <AnimatedBorderGlassCard borderColor="border-emerald-500">
+      </GlassCard>
+      <GlassCard className="border-emerald-500">
         <CardHeader>
           <CardTitle className="text-neutral-50">TinyML Plant Growth</CardTitle>
           <CardDescription className="text-neutral-300">
@@ -116,8 +123,8 @@ const Projects = (): React.JSX.Element => (
           <Badge>Sklearn</Badge>
           <Badge>Arduino</Badge>
         </CardFooter>
-      </AnimatedBorderGlassCard>
-      <AnimatedBorderGlassCard borderColor="border-emerald-500">
+      </GlassCard>
+      <GlassCard className="border-emerald-500">
         <CardHeader>
           <CardTitle className="text-neutral-50">
             License Plate and Shape Detection
@@ -139,7 +146,7 @@ const Projects = (): React.JSX.Element => (
           <Badge>OpenCV</Badge>
           <Badge>Dlib</Badge>
         </CardFooter>
-      </AnimatedBorderGlassCard>
+      </GlassCard>
     </div>
   </div>
 );
