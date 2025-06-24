@@ -37,7 +37,7 @@ const Projects = (): React.JSX.Element => (
               predicts the next position based on your inputs.
             </p>
           </CardContent>
-          <CardFooter className="mt-auto gap-0.5">
+          <CardFooter className="mt-auto justify-center gap-0.5">
             <Badge>TypeScript</Badge>
             <Badge>Vite</Badge>
             <Badge>ThreeJS</Badge>
@@ -67,7 +67,7 @@ const Projects = (): React.JSX.Element => (
               the scanned packets to a Wireshark instance for analysis.
             </p>
           </CardContent>
-          <CardFooter className="mt-auto gap-0.5">
+          <CardFooter className="mt-auto justify-center gap-0.5">
             <Badge>C</Badge>
             <Badge>C++</Badge>
             <Badge>C#</Badge>
@@ -118,7 +118,7 @@ const Projects = (): React.JSX.Element => (
             Arduino.
           </p>
         </CardContent>
-        <CardFooter className="mt-auto gap-0.5">
+        <CardFooter className="mt-auto justify-center gap-0.5">
           <Badge>Python</Badge>
           <Badge>Sklearn</Badge>
           <Badge>Arduino</Badge>
@@ -141,7 +141,7 @@ const Projects = (): React.JSX.Element => (
             contour extraction and image preprocessing.
           </p>
         </CardContent>
-        <CardFooter className="mt-auto gap-0.5">
+        <CardFooter className="mt-auto justify-center gap-0.5">
           <Badge>C++</Badge>
           <Badge>OpenCV</Badge>
           <Badge>Dlib</Badge>
