@@ -1,7 +1,7 @@
 import React from "react";
 
 const Intro = (): React.JSX.Element => (
-  <>
+  <div className="flex flex-col gap-5 md:flex-row md:items-start">
     <section className="flex flex-col gap-y-3 text-center md:w-1/2 md:text-left">
       <h2 className="text-5xl">Chandler Trousdale</h2>
       <p>Full-Stack Software Engineer</p>
@@ -39,7 +39,7 @@ const Intro = (): React.JSX.Element => (
         </div>
       </div>
     </section>
-  </>
+  </div>
 );
 
 export default Intro;

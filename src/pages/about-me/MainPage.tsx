@@ -36,8 +36,8 @@ import Sources from "./Sources";
 // );
 
 const MainPage = (): React.JSX.Element => (
-  <div className="text-neutral-100">
-    <article className="flex flex-col gap-5 md:flex-row md:items-start">
+  <div className="mb-10 flex flex-col gap-20 text-neutral-100">
+    <article>
       <Intro />
     </article>
     {/*}
@@ -50,13 +50,13 @@ const MainPage = (): React.JSX.Element => (
     {/* <article className="align-center mx-auto my-10 flex w-fit items-center justify-center gap-x-2 rounded-2xl border px-2 py-1 text-lg"> */}
     {/*   <TechIcons /> */}
     {/* </article> */}
-    <article className="flex flex-col items-center">
+    <article>
       <Experience />
     </article>
-    <article className="flex flex-col items-center pt-20">
+    <article>
       <Projects />
     </article>
-    <article className="flex flex-col items-center py-10 md:py-15">
+    <article>
       <Sources />
     </article>
   </div>

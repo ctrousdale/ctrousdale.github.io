@@ -8,7 +8,7 @@ import {
 
 const Experience = (): React.JSX.Element => {
   return (
-    <div className="flex flex-col gap-y-5">
+    <div className="flex flex-col items-center gap-y-5">
       <GlassCard className="border border-red-500">
         <CardHeader>
           <CardTitle className="text-neutral-50">Microsoft</CardTitle>
