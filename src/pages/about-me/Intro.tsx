@@ -8,10 +8,12 @@ const Intro = (): React.JSX.Element => (
     </section>
     <section className="">
       <div className="flex flex-col gap-y-2">
+        {/*
         <p className="pb-5 text-center text-lg md:text-left">
           I prioritize fundamentals, iterative improvement, and modern
           technologies.
         </p>
+        */}
         <div className="flex flex-col gap-y-1 font-mono">
           <div className="flex flex-wrap">
             <p className="w-full text-center md:text-left">
